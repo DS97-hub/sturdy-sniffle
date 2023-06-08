@@ -1,0 +1,154 @@
+theia@theiadocker-davidsneeeng:/home/project$ python3.8 -m pip install pandas dash
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pandas in /home/theia/.local/lib/python3.8/site-packages (2.0.2)
+Requirement already satisfied: dash in /home/theia/.local/lib/python3.8/site-packages (2.10.2)
+Requirement already satisfied: tzdata>=2022.1 in /home/theia/.local/lib/python3.8/site-packages (from pandas) (2023.3)
+Requirement already satisfied: pytz>=2020.1 in /home/theia/.local/lib/python3.8/site-packages (from pandas) (2022.1)
+Requirement already satisfied: numpy>=1.20.3 in /home/theia/.local/lib/python3.8/site-packages (from pandas) (1.24.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/theia/.local/lib/python3.8/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: dash-html-components==2.0.0 in /home/theia/.local/lib/python3.8/site-packages (from dash) (2.0.0)
+Requirement already satisfied: plotly>=5.0.0 in /home/theia/.local/lib/python3.8/site-packages (from dash) (5.15.0)
+Requirement already satisfied: dash-table==5.0.0 in /home/theia/.local/lib/python3.8/site-packages (from dash) (5.0.0)
+Requirement already satisfied: Flask<2.3.0,>=1.0.4 in /home/theia/.local/lib/python3.8/site-packages (from dash) (2.2.2)
+Requirement already satisfied: dash-core-components==2.0.0 in /home/theia/.local/lib/python3.8/site-packages (from dash) (2.0.0)
+Requirement already satisfied: Werkzeug<2.3.0 in /home/theia/.local/lib/python3.8/site-packages (from dash) (2.2.2)
+Requirement already satisfied: click>=8.0 in /home/theia/.local/lib/python3.8/site-packages (from Flask<2.3.0,>=1.0.4->dash) (8.1.3)
+Requirement already satisfied: Jinja2>=3.0 in /home/theia/.local/lib/python3.8/site-packages (from Flask<2.3.0,>=1.0.4->dash) (3.1.2)
+Requirement already satisfied: importlib-metadata>=3.6.0 in /home/theia/.local/lib/python3.8/site-packages (from Flask<2.3.0,>=1.0.4->dash) (4.12.0)
+Requirement already satisfied: itsdangerous>=2.0 in /home/theia/.local/lib/python3.8/site-packages (from Flask<2.3.0,>=1.0.4->dash) (2.1.2)
+Requirement already satisfied: tenacity>=6.2.0 in /home/theia/.local/lib/python3.8/site-packages (from plotly>=5.0.0->dash) (8.0.1)
+Requirement already satisfied: packaging in /home/theia/.local/lib/python3.8/site-packages (from plotly>=5.0.0->dash) (21.3)
+Requirement already satisfied: six>=1.5 in /home/theia/.local/lib/python3.8/site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/theia/.local/lib/python3.8/site-packages (from Werkzeug<2.3.0->dash) (2.1.1)
+Requirement already satisfied: zipp>=0.5 in /home/theia/.local/lib/python3.8/site-packages (from importlib-metadata>=3.6.0->Flask<2.3.0,>=1.0.4->dash) (3.8.1)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /home/theia/.local/lib/python3.8/site-packages (from packaging->plotly>=5.0.0->dash) (3.0.9)
+
+[notice] A new release of pip is available: 23.0.1 -> 23.1.2
+[notice] To update, run: python3.8 -m pip install --upgrade pip
+theia@theiadocker-davidsneeeng:/home/project$ wget "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DS0321EN-SkillsNetwork/datasets/spacex_launch_dash.csv"
+--2023-06-08 12:48:26--  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DS0321EN-SkillsNetwork/datasets/spacex_launch_dash.csv
+Resolving cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)... 169.63.118.104
+Connecting to cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)|169.63.118.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2476 (2.4K) [text/csv]
+Saving to: ‘spacex_launch_dash.csv.1’
+
+spacex_launch_dash.csv.1                     100%[=============================================================================================>]   2.42K  --.-KB/s    in 0s      
+
+2023-06-08 12:48:26 (557 MB/s) - ‘spacex_launch_dash.csv.1’ saved [2476/2476]
+
+theia@theiadocker-davidsneeeng:/home/project$ wget "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DS0321EN-SkillsNetwork/labs/module_3/spacex_dash_app.py"--2023-06-08 12:48:40--  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DS0321EN-SkillsNetwork/labs/module_3/spacex_dash_app.py
+Resolving cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)... 169.63.118.104
+Connecting to cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)|169.63.118.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2110 (2.1K) [text/x-python]
+Saving to: ‘spacex_dash_app.py.1’
+
+spacex_dash_app.py.1                         100%[=============================================================================================>]   2.06K  --.-KB/s    in 0s      
+
+2023-06-08 12:48:40 (455 MB/s) - ‘spacex_dash_app.py.1’ saved [2110/2110]
+
+theia@theiadocker-davidsneeeng:/home/project$ python3.8 spacex_dash_app.py
+spacex_dash_app.py:4: UserWarning: 
+The dash_html_components package is deprecated. Please replace
+`import dash_html_components as html` with `from dash import html`
+  import dash_html_components as html
+spacex_dash_app.py:5: UserWarning: 
+The dash_core_components package is deprecated. Please replace
+`import dash_core_components as dcc` with `from dash import dcc`
+  import dash_core_components as dcc
+Dash is running on http://127.0.0.1:8050/
+
+ * Serving Flask app 'spacex_dash_app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8050
+Press CTRL+C to quit
+import pandas as pd
+import dash
+import dash_html_components as html
+import dash_core_components as dcc
+from dash.dependencies import Input, Output
+import plotly.express as px
+
+# Read the airline data into pandas dataframe
+spacex_df = pd.read_csv("spacex_launch_dash.csv")
+max_payload = spacex_df['Payload Mass (kg)'].max()
+min_payload = spacex_df['Payload Mass (kg)'].min()
+
+# Create a dash application
+app = dash.Dash(__name__)
+
+# Create an app layout
+app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
+                                        style={'textAlign': 'center', 'color': '#503D36',
+                                               'font-size': 40}),
+# TASK 1: Add a dropdown list to enable Launch Site selection
+                                # The default select value is for ALL sites
+                                dcc.Dropdown(id='site-dropdown',
+                                            options=[
+                                                {'label': 'All Sites', 'value': 'ALL'},
+                                                {'label': 'CCAFS LC-40', 'value': 'CCAFS LC-40'},
+                                                {'label': 'VAFB SLC-4E', 'value': 'VAFB SLC-4E'},
+                                                {'label': 'KSC LC-39A', 'value': 'KSC LC-39A'},
+                                                {'label': 'CCAFS SLC-40', 'value': 'CCAFS SLC-40'},
+                                            ],
+                                            value='ALL',
+                                            placeholder="Select a Launch Site here",
+                                            searchable=True
+                                            ),
+                                html.Br(),
+
+                                # TASK 2: Add a pie chart to show the total successful launches count for all sites
+                                # If a specific launch site was selected, show the Success vs. Failed counts for the site
+                                html.Div(dcc.Graph(id='success-pie-chart')),
+                                html.Br(),
+
+                                html.P("Payload range (Kg):"),
+                                # TASK 3: Add a slider to select payload range
+                                #dcc.RangeSlider(id='payload-slider',...)
+                                dcc.RangeSlider(id='payload-slider',
+                                                min=0, max=10000, step=1000,
+                                                marks={0: '0', 2500: '2500', 5000: '5000', 7500: '7500', 10000: '10000'},
+                                                value=[min_payload, max_payload]),
+                                # TASK 4: Add a scatter chart to show the correlation between payload and launch success
+                                html.Div(dcc.Graph(id='success-payload-scatter-chart')),
+                                ])
+
+# TASK 3:
+# Add a callback function for `site-dropdown` as input, `success-pie-chart` as output
+# Function decorator to specify function input and output
+@app.callback(Output(component_id='success-pie-chart', component_property='figure'),
+              Input(component_id='site-dropdown', component_property='value'))
+def get_pie_chart(entered_site):
+    filtered_df = spacex_df
+    if entered_site == 'ALL':
+        fig = px.pie(filtered_df, values='class', 
+        names='Launch Site', 
+        title='Total Success Launches By Site')
+        return fig
+    else:
+        # return the outcomes piechart for a selected site
+        filtered_df = spacex_df[spacex_df['Launch Site'] == entered_site]
+        filtered_df = filtered_df.groupby(['Launch Site', 'class']).size().reset_index(name='class count')
+        fig = px.pie(filtered_df, values='class count', 
+        names='class',
+        title=f'Total Success Launched for site {entered_site}')
+        return fig
+# TASK 4:
+# Add a callback function for `site-dropdown` and `payload-slider` as inputs, `success-payload-scatter-chart` as output
+@app.callback(Output(component_id='success-payload-scatter-ch127.0.0.1 - - [08/Jun/2023 13:10:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:30] "GET /_dash-component-suites/dash/deps/polyfill@7.v2_10_2m1686241822.12.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:31] "GET /_dash-component-suites/dash/dash_table/bundle.v5_2_5m1686241822.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:31] "GET /_dash-component-suites/dash/deps/react@16.v2_10_2m1686241822.14.0.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:31] "GET /_dash-component-suites/dash/dcc/dash_core_components.v2_10_0m1686241822.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:31] "GET /_dash-component-suites/dash/dash-renderer/build/dash_renderer.v2_10_2m1686241822.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:31] "GET /_dash-component-suites/dash/deps/react-dom@16.v2_10_2m1686241822.14.0.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:31] "GET /_dash-component-suites/dash/dcc/dash_core_components-shared.v2_10_0m1686241822.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:31] "GET /_dash-component-suites/dash/deps/prop-types@15.v2_10_2m1686241822.8.1.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:31] "GET /_dash-component-suites/dash/html/dash_html_components.v2_0_12m1686241822.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:32] "GET /_dash-layout HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:32] "GET /_dash-dependencies HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:32] "GET /_favicon.ico?v=2.10.2 HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:32] "GET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2023 13:10:32] "GET /_dash-component-suites/dash/dcc/async-plotlyjs.js HTTP/1.1" 200 -
